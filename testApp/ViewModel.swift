@@ -5,7 +5,7 @@ struct ViewModel {
     var numberOfConGradACs = 4
 
     var totalNumberOfACsAsString: String {
-        return String(numberOfConGradACs + numberOfConACs)
+        return "\(numberOfConGradACs + numberOfConACs)"
     }
 
 }

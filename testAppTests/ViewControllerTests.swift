@@ -8,12 +8,12 @@ class ViewControllerTests: QuickSpec {
     override func spec() {
         describe("viewDidLoad") {
             it("should set the label to the total number of ACs") {
-//                let viewController = ViewController()
-////                viewController.viewDidLoad()
-////                viewController.label = UILabel()
-////                viewController.label.text = "15"
-//
-//                expect(viewController.label.text) == "15"
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = storyBoard.instantiateInitialViewController() as! ViewController
+                let _ = viewController.view
+
+                //flakey assertion with lots of overhead
+                expect(viewController.label.text) == "14"
             }
         }
     }
