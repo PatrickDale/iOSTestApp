@@ -24,5 +24,27 @@ Part of iOS workshop - Diving into MVVM
 5. Choose the location to save your project
 6. Once saved, close the project in Xcode
 6. Go to the project in your terminal
-7. Initialize it using CocoaPods: `pod init`
-8. Reopen the project's workspace: `open yourProjectName.xcworkspace`
+7. Create a Podfile using CocoaPods: `pod init`
+8. Open the Podfile in a text editor
+9. Change it to look like the following, where `yourApp` is the name you chose for your App
+<pre><code>workspace 'yourApp'
+  project 'yourApp.xcodeproj'
+  platform :ios, '9.2'
+  
+  use_frameworks!
+  
+  def testing_pods
+    pod 'Quick', '~> 0.9.2'
+    pod 'Nimble', '~> 4.0.1'
+  end
+  
+  target 'yourApp' do
+  end
+  
+  target 'yourAppTests' do
+    testing_pods
+  end
+</code></pre>
+10. Install the dependencies: `pod install`
+11. Reopen the project's workspace: `open yourApp.xcworkspace`
+
