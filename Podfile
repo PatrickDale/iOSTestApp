@@ -7,7 +7,12 @@ use_frameworks!
 def testing_pods
   pod 'Quick', '~> 0.9.2'
   pod 'Nimble', '~> 4.0.1'
+  pod 'OHHTTPStubs'
+  pod 'OHHTTPStubs/Swift'
 end
+
+pod 'Alamofire'
+pod 'SwiftyJSON'
 
 target 'testApp' do
 end
