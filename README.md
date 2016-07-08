@@ -48,3 +48,9 @@ Part of iOS workshop - Diving into MVVM
 10. Install the dependencies: `pod install`
 11. Reopen the project's workspace: `open yourApp.xcworkspace`
 
+### Starting the Server
+* `cd server`
+* `npm install`
+* `npm start`
+* verify that hitting `localhost:8000` displays 'welcome'
+
