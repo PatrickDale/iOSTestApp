@@ -13,6 +13,7 @@ end
 
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'ReactiveCocoa'
 
 target 'testApp' do
 end
