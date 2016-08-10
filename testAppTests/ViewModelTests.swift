@@ -6,16 +6,18 @@ import Nimble
 
 class ViewModelTests : QuickSpec {
     override func spec() {
-        describe("total number of ACs") {
-            it("should return the total number of ACs in the program") {
-                var viewModel = ViewModel()
-                viewModel.numberOfConACs = 7
-                viewModel.numberOfConGradACs = 4
+        describe("People List View Model") {
+            var viewModel: ViewModel!
+            var peopleServiceMock: ServiceMock!
 
-                let totalNumberAsString = "11"
-
-                expect(viewModel.totalNumberOfACsAsString) == totalNumberAsString
+            beforeEach {
+                peopleServiceMock = ServiceMock()
+                viewModel = ViewModel(peopleService: peopleServiceMock)
+            }
+            it("should initialize with a list of people") {
+                expect(viewModel.peopleList.value.count).toEventually(equal(1))
             }
         }
     }
 }
+
